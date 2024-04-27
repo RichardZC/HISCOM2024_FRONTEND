@@ -1,0 +1,21 @@
+module.exports = {
+  arrowParens: "always",
+  doubleQuote: true,
+  endOfLine: "auto",
+  pugSortAttributes: "asc",
+  semi: true,
+  trailingComma: "all",
+  pugSortAttributesBeginning: [
+    "^ref$",
+    "^col$",
+    "^v-if$",
+    "^v-else-if$",
+    "^v-else$",
+    "^v-model$",
+    "^v-for$",
+    "^:key$",
+    "^v-.*$",
+    "^:.*$",
+    "^@.*$",
+  ],
+};
