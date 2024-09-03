@@ -229,11 +229,12 @@ card(title="Crear")
                     multiple
                   )
             v-col.d-flex.justify-center(cols=12, md=6)
+      //-
               image-input(
                 v-model="employee.foto",
                 message="Suelte la foto del empleado o"
               )
-
+      -//
             v-col(v-if="isResponsive", cols=12)
               v-btn(@click="nextPage(3)", color="primary", icon)
                 v-icon mdi-arrow-right
@@ -491,7 +492,7 @@ export default class extends Vue {
 
     if (!this.formValid.includes(false)) {
       this.isLoading = true;
-
+      this.employee.foto=null;
       await this.$axios.buildResponse({
         notify: "always",
         attempts: 1,
